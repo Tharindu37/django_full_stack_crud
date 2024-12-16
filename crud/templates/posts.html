@@ -1,0 +1,8 @@
+{% include "header.html" %}
+<div style="margin: 20px;">
+    <h2 style="color: #4CAF50;">Posts</h2>
+    {% for post in posts %}
+        {% include "post.html" %}
+    {% endfor %}
+</div>
+{% include "footer.html" %}
