@@ -1,18 +1,24 @@
 {% include "navbar.html" %}
 <div style="margin: 20px;">
     <h2 style="color: #4CAF50;">Welcome to My Website</h2>
-    <table class="table">
+    <a href="{% url 'create' %}">Create</a>
+    <table class="table" style="border:1px solid green">
         <thead>
             <tr>
                 <th>name</th>
-                <th>description</th>
+               
             </tr>
         </thead>
         <tbody>
             {% for i in database %}
             <tr>
                 <td scope="row">{{i.name}}</td>
-                <td>{{i.description}}</td>
+                <td>
+                    <a href="{% url 'post' i.id %}">View</a>
+                    
+                </td>
+                <td><a href="{% url 'update' i.id %}">update</a></td>
+                <td><a href="{% url 'delete' i.id %}"> delete </a></td>
             </tr>
             {% endfor %}
         </tbody>

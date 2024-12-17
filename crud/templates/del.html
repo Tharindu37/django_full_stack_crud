@@ -1,0 +1,8 @@
+{% comment %} {% extends 'home.html' %} {% endcomment %}
+
+<h1>Are you sure delete this</h1>
+<form action="" method="POST">
+    {%csrf_token%}
+    <a href="{% url 'posts' %}">go back</a>
+    <input type="submit" value="Delete">
+</form>

@@ -1,0 +1,10 @@
+{% comment %} {% extends 'home.html'%} {% endcomment %}
+
+{% block content %}
+  <h2>Create New Post</h2>
+  <form method="POST" action="">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}
